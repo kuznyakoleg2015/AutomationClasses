@@ -76,9 +76,32 @@ namespace PetCareTests
             
             
         }
+        [Test]
+        public void Compatison2()
+        {
+            var random = new Random();
+            int number = random.Next(9999);
+            int number2 = random.Next(100);
+
+            if (number == number2)
+            {
+                Console.WriteLine($"Numbers {number} and {number2} are equal");
+            }
+            else
+            {
+                Console.WriteLine($"Numbers {number} and {number2} are not equal");
+            }
+
+
+
+
+
+
+        }
 
 
     }
+
 }
 
 
