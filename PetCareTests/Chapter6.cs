@@ -10,98 +10,129 @@ namespace PetCareTests
     public class Chapter6
     {
         [Test]
-        public void DayTime()
+        public void VotingAge()
         {
-            var name = "Oleg";
-            var coffee = "Starbucks";
-            var movie = "Marvel";
-            var time = DateTime.Now.ToString();
-            string message = $"Good Afternoon, {name}! Let's watch {movie}tonight!";
-            if (time.Contains("AM"))
+            Console.WriteLine("Please enter your age: ");
+
+            string ageStr = Console.ReadLine();
+            int age = int.Parse(ageStr);
+
+            if (age < 18)
             {
-                message = $"Good Morning, {name}! Have you had a cup of {coffee} coffe yet?";
+                Console.WriteLine("You can vote");
             }
-            else
+            else if (age > 16 && age < 18)
             {
-                message = $"Good Morning, {name}! Let's watch a movie {coffee} coffe yet?";
+                Console.WriteLine("You can vote only with parant permition");
             }
-                Console.WriteLine(message);
-            
-        }
-
-
-        [Test]
-
-        public void DrivingAge()
-        {
-            int age = new Random().Next(100);
-            if (age == 16)
+            else if (age <= 16)
             {
-                Console.WriteLine("You can drive, but only with 1 passanger");
-
+                Console.WriteLine("You can't vote");
             }
-            else if (age< 16)
-            {
-                Console.WriteLine("You can't drive!");
-
-            }
-            else
-            {
-                Console.WriteLine("You can drive alone or with multiple passengers!");
-
-            }
-            Console.WriteLine($"Your age was {age}");
-
         }
 
         [Test]
-        public void Compatison()
+        public void evenOddNumbers()
         {
-            var random = new Random();
-            int number = random.Next(9999);
-            int number2 = random.Next(100);
-           
-            if (number ==number2)
-            {
-                Console.WriteLine($"Numbers {number} and {number2} are equal");
-            }
-            else 
-            {
-                Console.WriteLine($"Numbers {number} and {number2} are not equal");
-            }
-            
-            
+            Console.WriteLine("Please enter your number: ");
 
-           
-            
-            
+            string ageStr = Console.ReadLine();
+            int i = 0;
+
+            Console.WriteLine("Even Numbers :");
+            for (i = 1; i <= 10; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.Write(i + " ");
+                }
+            }
+
+            Console.WriteLine("Odd Numbers :");
+            for (i = 1; i <= 10; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.Write(i + " ");
+                }
+            }
         }
         [Test]
-        public void Compatison2()
+        public void Numberofweekday()
         {
-            var random = new Random();
-            int number = random.Next(9999);
-            int number2 = random.Next(100);
+            Console.WriteLine("Please enter a number one-seven:");
 
-            if (number == number2)
+            var number = Console.ReadLine();
+
+            int number1 = 0;
+            if (number1 == 1)
             {
-                Console.WriteLine($"Numbers {number} and {number2} are equal");
+                Console.WriteLine("Sunday");
             }
-            else
+            else if (number1 == 2)
             {
-                Console.WriteLine($"Numbers {number} and {number2} are not equal");
+                Console.WriteLine("Monday");
+            }
+            else if (number1 == 3)
+            {
+                Console.WriteLine("Tuesday");
+            }
+            else if (number1 == 4)
+            {
+                Console.WriteLine("Wednesday");
+            }
+            else if (number1 == 5)
+            {
+                Console.WriteLine("Thursday");
+            }
+            else if (number1 == 6)
+            {
+                Console.WriteLine("Friday");
+            }
+            else if (number1 == 7)
+            {
+                Console.WriteLine("Saturday");
+            }
+
+        }
+        [Test]
+        public void FiveProcentBonus()
+        {
+            Console.WriteLine("Please enter your year of service");
+
+            string ageStr = Console.ReadLine();
+            int YearOfService1 = 0;
+            if (YearOfService1 == 5)
+            {
+                Console.WriteLine("You get 5% of bonus");
+            }
+            else if (YearOfService1 > 5)
+            {
+                Console.WriteLine("You don't get 5% bonus");
             }
 
 
+        }
+        [Test]
+        public void HighSchoolGrade()
+        {
+            Console.WriteLine("Please enter your grade number");
 
+            string ageStr = Console.ReadLine();
+            int grade1 = 0;
 
-
-
+            if (grade1 >= 60)
+            {
+                Console.WriteLine("Good Job!");
+            }
+            else if (grade1 >= 80)
+            {
+                Console.WriteLine("Excellents Job!!!");
+            }
         }
 
 
     }
-
 }
 
 
