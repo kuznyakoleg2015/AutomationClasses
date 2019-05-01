@@ -58,13 +58,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chapter6.cs" />
-    <Compile Include="Chapter 6 Homework.cs" />
+    <Compile Include="Chapter6\Chapter6.cs" />
+    <Compile Include="PetCareWedTest\Pages\CareRequsPages.cs" />
+    <Compile Include="PetCareWedTest\Pages\NavigationMenuPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PetCareWedTest\Tests\CareRequestTest.cs" />
+    <Compile Include="PetCareWedTest\Tests\PetCareTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
